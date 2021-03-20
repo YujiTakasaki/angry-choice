@@ -27,4 +27,4 @@
 [cm]
 [freeimage layer=1]
 
-@jump storage=story1.ks target=*first
+@jump storage=prologue.ks
