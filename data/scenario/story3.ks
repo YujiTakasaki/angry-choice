@@ -2,9 +2,9 @@
 *first
 [cm]
 [image layer="base" page="fore" storage=room.jpg]
-[chara_new name="mother" storage="mother.png" jname="母"]
+[chara_new name="rougai" storage="rougai_normal.PNG" jname="老害爺さん"]
 
-[chara_show name="mother"]
+;[chara_show name="mother"]
 
 @layopt layer=message0 visible=true
 [position height=160 top=430]
@@ -16,6 +16,8 @@
 しばらく歩くと目の前に見知らぬ、おじいちゃんが鳩の餌やりをしていた。[l]
 [cm]
 [font color="black"]
+
+[chara_show name="mother"]
 ここで鳩の餌やりは禁止ですよ[l]
 [cm]
 [font color="black"]
@@ -91,7 +93,7 @@
 [cm]
 [font color="red"]
 @jump storage=story2.ks target=*story2
-@jump target=*common
+
 
 
 *common
