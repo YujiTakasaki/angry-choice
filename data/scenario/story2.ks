@@ -53,10 +53,7 @@
 [locate x=300 y=300]
 [button graphic="next.png" target=*second]
 [s]
-*second
-[cm]
 
-@jump storage=story3.ks target=*story3
 
 
 *select2
@@ -71,7 +68,11 @@
 [font color="black"]
 言い訳する息子なんていらないから！[l]
 【！罰ゲーム！】隣の人につねられる。
-@jump target=*common
+@layopt layer=message0 visible=false
+[locate x=300 y=300]
+[button graphic="next.png" target=*second]
+[s]
+
 
 *select3
 [cm]
@@ -87,19 +88,13 @@
 [cm]
 [font color="black"]
 【！罰ゲーム！】隣の人にデコピンされる。[l]
-@jump target=*common
-
-
-*common
-[cm]
 @layopt layer=message0 visible=false
-[image layer=1 storage=goal2.png visible=true top=100 left=100 width=700]
-[locate x=200 y=300 ]
-[button graphic="start.png" target=*start x=300]
+[locate x=300 y=300]
+[button graphic="next.png" target=*second]
 [s]
-*start
+*second
 [cm]
-[chara_hide name=mother]
-[freeimage layer=1]
 
-@jump storage=first.ks target=*title
+@jump storage=story3.ks target=*story3
+
+

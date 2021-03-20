@@ -48,7 +48,11 @@
 [cm]
 [font color="black"]
 【！罰ゲーム！】お父さんの物まねをしろ！[l]
-@jump target=*common
+@layopt layer=message0 visible=false
+[locate x=300 y=300]
+[button graphic="next.png" target=*second]
+[s]
+
 
 
 *select2
@@ -63,10 +67,7 @@
 [locate x=300 y=300]
 [button graphic="next.png" target=*second]
 [s]
-*second
-[cm]
 
-@jump storage=story2.ks target=*story2
 
 *select3
 [cm]
@@ -79,20 +80,14 @@
 [cm]
 [font color="black"]
 【！罰ゲーム！】何か一品注文orコンビニおごり！[l]
-@jump target=*common
 
-
-*common
-[cm]
 @layopt layer=message0 visible=false
-[image layer=1 storage=goal2.png visible=true top=100 left=100 width=700]
-[locate x=200 y=300 ]
-[button graphic="start.png" target=*start x=300]
+[locate x=300 y=300]
+[button graphic="next.png" target=*second]
 [s]
-*start
+*second
 [cm]
-[chara_hide name=mother]
-[freeimage layer=1]
 
-@jump storage=first.ks target=*title
+@jump storage=story2.ks target=*story2
+
 
