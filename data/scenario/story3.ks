@@ -51,7 +51,7 @@
 コロナで人と会えなくて寂しいんだよ！[l]
 [cm]
 [font color="black"]
-【！罰ゲーム！】お父さんの物まねをしろ！[l]
+【！罰ゲーム！】最高のポーズをスマホで自撮りする！[l]
 @jump target=*common
 
 ;とりあえず鳩に餌をやるのは法律違反です。
@@ -59,10 +59,10 @@
 [cm]
 @layopt layer=message0 visible=true
 [font color="black"]
-あら、本当だわ。[l]
+あんたは何もわかってない！[l]
 [cm]
 [font color="black"]
-怒ってごめんなさいね。[l]
+ハトの餌をかけられた。[l]
 @layopt layer=message0 visible=false
 [locate x=300 y=300]
 [button graphic="next.png" target=*second]
@@ -70,20 +70,27 @@
 *second
 [cm]
 
-@jump storage=story2.ks target=*story2
+@jump target=*common
 
 ;確かに鳩はかわいそうですが、それよりも優先すべきことがあるのではないでしょうか？
 *select3
 [cm]
 @layopt layer=message0 visible=true
 [font color="black"]
-あんた、家にいるとずーーーと食べてるじゃない！[l]
+コロナで全てを失った俺に何ができるって言うんだ・・・[l]
 [cm]
 [font color="black"]
-そんなんなら一生食べ続けてなさい！[l]
+今からでもできることはありますよ！[l]
 [cm]
-[font color="black"]
-【！罰ゲーム！】何か一品注文orコンビニおごり！[l]
+[font color="red"]
+そうか。俺にもまだ生きる資格はあるのか。[l]
+[cm]
+[font color="red"]
+はい！自信を持って生きていきましょう！[l]
+とりあえず、、、警察行きましょうか。[l]
+[cm]
+[font color="red"]
+@jump storage=story2.ks target=*story2
 @jump target=*common
 
 
