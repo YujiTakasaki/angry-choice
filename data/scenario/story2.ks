@@ -1,10 +1,21 @@
-*story2
+; これを書けば、誰が選択するかを表示できる。
+*first
+[cm]
+[eval exp="tf.player="""]
+[eval exp="tf.display="""]
+[iscript]
+tf.player = f.pname[Math.floor(Math.random()*f.number)]
+tf.display = tf.player + "さんが選択して下さい"
+[endscript]
+[dialog type=alert text=&tf.display target="*start" color="0xff0000"]
+
+*start
 [cm]
 [cm]
 [chara_hide name="mother"]
-[image layer="base" page="fore" storage=room1.jpg]
+[image layer="base" page="fore" storage=room.jpg]
 [chara_new name="mother" storage="mother.png" jname="母"]
-[chara_new name="me" storage="mother.png" jname="僕"]
+[chara_new name="me" storage="mother.png" jname=&tf.player]
 [chara_face name="mother" face="bikkuri" storage="bikkuri.png"]
 [chara_face name="mother" face="happy" storage="happy.png"]
 [chara_mod name="mother" face="default"]
@@ -17,7 +28,7 @@
 [font color="black"]
 
 #me
-2日目[l]
+2日目[l][r]
 [font color="black"]
 今日はだれにも怒られなさそうだぞ！！[l]
 [cm]
@@ -27,7 +38,7 @@
 ねえちょっと、[l]
 [cm]
 [font color="black"]
-今月の携帯料金すごい高いんだけど？[l]
+今月の携帯料金すごい高いんだけど？[l][r]
 [cm]
 [font color="black"]
 なんでこんなに高いわけ？[l]
@@ -56,7 +67,7 @@
 [cm]
 [font color="black"]
 怒ってごめんなさいね。[l]
-[dialog type=alert text="二日目クリア！次の日に進む" target="*second"]
+[dialog type=alert text="二日目クリア！次の日に進む" target="*good"]
 
 
 
@@ -71,7 +82,7 @@
 [cm]
 [font color="black"]
 言い訳する息子なんていらないから！[l]
-[dialog type=alert text="【！罰ゲーム！】隣の人につねられる。" target="*second"]
+[dialog type=alert text="【！罰ゲーム！】隣の人につねられる。" target="*bad"]
 
 
 *select3
@@ -87,11 +98,41 @@
 [chara_mod name="mother" face="default"]
 [font color="black"]
 度胸のあるあんたにはデコピンをあげるわ。[l]
-[dialog type=alert text="【！罰ゲーム！】隣の人にデコピンされる。" target="*second"]
+[dialog type=alert text="【！罰ゲーム！】隣の人にデコピンされる。" target="*bad"]
 
 
-*second
+*good
+[image layer="base" page="fore" storage=room1.jpg]
+[cm]
+@layopt layer=message0 visible=true
+[font color="black"]
+[chara_hide name="mother"]
+#
+……その日の夜[l][r]
+[cm]
 
-@jump storage=story3.ks target=*story3
+#me
+[font color="black"]
+今日は怒られなかったぞ。[l][r]
+明日も怒られないと良いな……。[l][r]
+[cm]
+@jump storage=story3.ks target=*first
 
+
+*bad
+[image layer="base" page="fore" storage=room1.jpg]
+[cm]
+@layopt layer=message0 visible=true
+[font color="black"]
+[chara_hide name="mother"]
+#
+……その日の夜[l][r]
+[cm]
+
+#me
+[font color="black"]
+怒られてしまった……。[l][r]
+明日は怒られないと良いな……。[l][r]
+[cm]
+@jump storage=story3.ks target=*first
 
