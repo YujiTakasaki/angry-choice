@@ -1,11 +1,19 @@
-;ストーリー最初から
+; これを書けば、誰が選択するかを表示できる。
 *first
 [cm]
+[eval exp="tf.player="""]
+[eval exp="tf.display="""]
+[iscript]
+tf.player = f.pname[Math.floor(Math.random()*f.number)]
+tf.display = tf.player + "さんが選択して下さい"
+[endscript]
+[dialog type=alert text=&tf.display target="*start" color="0xff0000"]
+
+;ストーリー最初から
+*start
 [image layer="base" page="fore" storage=room.jpg]
-
-
 [chara_new name="mother" storage="mother.png" jname="母"]
-[chara_new name="me" storage="mother.png" jname="僕"]
+[chara_new name="me" storage="mother.png" jname=&tf.player]
 [chara_face name="mother" face="bikkuri" storage="bikkuri.png"]
 [chara_face name="mother" face="happy" storage="happy.png"]
 
@@ -49,7 +57,6 @@
 [glink x="100" y="400" text="後でやる" target="*select1" color="orange" size="20"]
 
 
-
 [glink x="340" y="400" text="洗剤がなかった" target="*select2" color="orange" size="20"]
 
 
@@ -67,7 +74,7 @@
 [cm]
 [font color="black"]
 本当にお父さんにそっくりね！[l]
-[dialog type=alert text="【！罰ゲーム！】お父さんの物まねをしろ！" target="*second" color="0xff0000"]
+[dialog type=alert text="【！罰ゲーム！】お父さんの物まねをしろ！" target="*bad" color="0xff0000"]
 
 
 
@@ -82,7 +89,7 @@
 [cm]
 [font color="black"]
 怒ってごめんなさいね。[l]
-[dialog type=alert text="一日目クリア！次の日に進む" target="*second"]
+[dialog type=alert text="一日目クリア！次の日に進む" target="*good"]
 
 
 *select3
@@ -94,12 +101,40 @@
 [cm]
 [font color="black"]
 そんなんなら一生食べ続けてなさい！[l]
-[dialog type=alert text="【！罰ゲーム！】何か一品注文orコンビニおごり！" target="*second" color="0xff0000"]
+[dialog type=alert text="【！罰ゲーム！】何か一品注文orコンビニおごり！" target="*bad" color="0xff0000"]
+
+; 基本こんな感じでやると良さそう。
+*good
+[image layer="base" page="fore" storage=room1.jpg]
+[cm]
+@layopt layer=message0 visible=true
+[font color="black"]
+[chara_hide name="mother"]
+#
+……その日の夜[l][r]
+[cm]
+
+#me
+[font color="black"]
+今日は怒られなかったぞ。[l][r]
+明日も怒られないと良いな……。[l][r]
+[cm]
+@jump storage=story2.ks target=*first
 
 
+*bad
+[image layer="base" page="fore" storage=room1.jpg]
+[cm]
+@layopt layer=message0 visible=true
+[font color="black"]
+[chara_hide name="mother"]
+#
+……その日の夜[l][r]
+[cm]
 
-*second
-
-@jump storage=story2.ks target=*story2
-
-
+#me
+[font color="black"]
+怒られてしまった……。[l][r]
+明日は怒られないと良いな……。[l][r]
+[cm]
+@jump storage=story2.ks target=*first

@@ -26,6 +26,7 @@
 
 [cm]
 
+*chose-num
 何人で遊びますか？[l]
 
 [glink x="100" y="200" text="1人" target="*jump" exp="f.number = 1"]
@@ -54,7 +55,7 @@
 *restart
 ではもう一度。[l]
 [cm]
-[jump target=*start]
+[jump target=*chose-num]
 [s]
 
 *commit
@@ -98,9 +99,9 @@ $(".text_box").keydown(function(e){ if(e.which == 13) { $(".decision").click(); 
 *commit-name
 
 [commit name="f.buffer"]
-[eval exp="f.pname[f.number] = f.buffer"]
+[eval exp="f.pname[f.cnt] = f.buffer"]
 [cm]
-「[emb exp="f.pname[f.number"]]」さんですね！[r]
+「[emb exp="f.pname[f.cnt]"]」さんですね！[r]
 よろしくお願いします！[l]
 [cm]
 
