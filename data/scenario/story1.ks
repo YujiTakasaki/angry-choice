@@ -66,7 +66,7 @@
 *second
 [cm]
 
-@jump storage=story2.ks target=*story2
+@jump storage=story3.ks target=*story3
 
 *select3
 [cm]
