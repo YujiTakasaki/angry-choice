@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ;ストーリー最初から
 *story3
 [cm]
@@ -110,3 +111,8 @@
 
 @jump storage=first.ks target=*title
 
+=======
+*story3
+[cm]
+三日目
+>>>>>>> origin/main
