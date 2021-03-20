@@ -1,5 +1,5 @@
 ;ストーリー最初から
-*first
+*story3
 [cm]
 [image layer="base" page="fore" storage=room.jpg]
 [chara_new name="rougai" storage="rougai_normal.PNG" jname="老害爺さん"]
@@ -17,7 +17,7 @@
 [cm]
 [font color="black"]
 
-[chara_show name="mother"]
+[chara_show name="rougai" wait=true left=1300 top=100]
 ここで鳩の餌やりは禁止ですよ[l]
 [cm]
 [font color="black"]
@@ -92,7 +92,7 @@
 とりあえず、、、警察行きましょうか。[l]
 [cm]
 [font color="red"]
-@jump storage=story2.ks target=*story2
+@jump storage=story4.ks target=*story4
 
 
 
@@ -105,7 +105,7 @@
 [s]
 *start
 [cm]
-[chara_hide name=mother]
+[chara_hide name=rougai]
 [freeimage layer=1]
 
 @jump storage=first.ks target=*title
