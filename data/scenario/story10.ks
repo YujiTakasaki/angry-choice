@@ -146,7 +146,7 @@ tf.display = tf.player + "さんが選択して下さい"
 [font color="black"]
 お前はいいやつだ。[l]
 
-[dialog type=alert text="十日目クリア！次の日に進む" target="*second" color="0xff0000"]
+[dialog type=alert text="十日目クリア！エンディングへ" target="*second" color="0xff0000"]
 
 
 
