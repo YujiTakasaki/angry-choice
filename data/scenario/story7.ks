@@ -1,5 +1,16 @@
-;ストーリー最初から
+; これを書けば、誰が選択するかを表示できる。
 *first
+[cm]
+[eval exp="tf.player="""]
+[eval exp="tf.display="""]
+[iscript]
+tf.player = f.pname[Math.floor(Math.random()*f.number)]
+tf.display = tf.player + "さんが選択して下さい"
+[endscript]
+[dialog type=alert text=&tf.display target="*start" color="0xff0000"]
+
+;ストーリー最初から
+*start
 [cm]
 [image layer="base" page="fore" storage=school.jpg]
 
@@ -71,7 +82,10 @@
 [cm]
 [font color="black"]
 嘘つきに単位はあげられないな。[l]
-[dialog type=alert text="【！罰ゲーム！】" target="*second" color="0xff0000"]
+[cm]
+[font color="black"]
+何か一曲歌ったら許してやろう。[l]
+[dialog type=alert text="【！罰ゲーム！】好きな曲を全力で歌え！！" target="*second" color="0xff0000"]
 
 
 
@@ -85,7 +99,10 @@
 [cm]
 [font color="black"]
 だが、物乞いは恥ずかしいぞ。[l]
-[dialog type=alert text="【！罰ゲーム！】お父さんの物まねをしろ！" target="*second" color="0xff0000"]
+[cm]
+[font color="black"]
+あかちゃんみたいにばぶばぶ言っていろ。[l]
+[dialog type=alert text="【！罰ゲーム！】今日の語尾を「バブ」にしろ！" target="*second" color="0xff0000"]
 
 
 
@@ -102,11 +119,11 @@
 先生はそういう馬鹿な奴嫌いじゃないぞ！[l]
 [cm]
 [font color="black"]
-可愛そうだから今回は猶予をあげよう。
+可愛そうだから今回は猶予をあげよう。[l]
 [dialog type=alert text="七日目クリア！次の日に進む" target="*second"]
 
 
 
 *second
 
-@jump storage=story2.ks target=*story2
+@jump storage=story8.ks target=*first
