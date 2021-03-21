@@ -12,16 +12,16 @@
 
 うまくなだめて、難を逃れましょう[r]
 [r]
-[chara_mod name="mother" face="happy"]
+[chara_mod name="mother" face="happy" time="300"]
 [l]
 なだめ方を間違ってしまうと……
-[chara_mod name="mother" face="bikkuri"]
+[chara_mod name="mother" face="bikkuri" time="300"]
 [l][r]
 [r]
-[chara_mod name="mother" face="default"]
+[chara_mod name="mother" face="default" time="300"]
 さらに怒られてしまいます。[l][r]
 [r]
-[chara_hide name="mother" ]
+[chara_hide name="mother" time="300" ]
 頑張りましょう。[l]
 
 [cm]

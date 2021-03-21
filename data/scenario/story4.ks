@@ -14,13 +14,11 @@ tf.display = tf.player + "さんが選択して下さい"
 *start
 [cm]
 [cm]
-[chara_hide name="mother"]
 [image layer="base" page="fore" storage=super.png]
 [chara_new name="rougai" storage="rougai_normal.PNG" jname="老害おじさん"]
 [chara_new name="me" storage="mother.png" jname=&tf.player]
 [chara_face name="rougai" face="angry" storage="rougai_angry.PNG"]
 [chara_face name="rougai" face="sad" storage="rougai_hansei.PNG"]
-[chara_mod name="mother" face="default"]
 
 
 @layopt layer=message0 visible=true
@@ -33,6 +31,8 @@ tf.display = tf.player + "さんが選択して下さい"
 4日目[l][r]
 [font color="black"]
 今日はだれにも怒られないといいな・・・[l][r]
+[font color="black"]
+#
 お使いを頼まれたので、スーパーで買い物をしていた。[l]
 [cm]
 [chara_show name="rougai"]
@@ -44,7 +44,7 @@ tf.display = tf.player + "さんが選択して下さい"
 そんなもの持っていたら危ないだろ！！！[l]
 [cm]
 [font color="black"]
-#me
+#
 
 老害は自分が手に持っていた、スマホを指差してそう怒鳴ってきた！[l]
 [cm]

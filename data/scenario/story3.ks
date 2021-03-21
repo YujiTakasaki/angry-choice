@@ -11,40 +11,43 @@ tf.display = tf.player + "さんが選択して下さい"
 
 *start
 [cm]
-[cm]
-[chara_hide name="mother"]
 [image layer="base" page="fore" storage=park.jpg]
 [chara_new name="rougai" storage="rougai_normal.PNG" jname="老害おじさん"]
 [chara_new name="me" storage="mother.png" jname=&tf.player]
 [chara_face name="rougai" face="angry" storage="rougai_angry.PNG"]
 [chara_face name="rougai" face="sad" storage="rougai_hansei.PNG"]
-[chara_mod name="mother" face="default"]
 
 
 @layopt layer=message0 visible=true
 [position height=160 top=430]
 [position layer=message0 width=800 height=300 top=380 left=70 ]
 [position layer=message0 page=fore frame="frame.png" margint="65" marginl="50" marginr="70" marginb="60"]
+[ptext name="chara_name_area" layer=message0 width="200" color=white x=90 y=380 size=26]
+[chara_config ptext="chara_name_area"]
 [font color="black"]
 
-#me
+#
 3日目[l][r]
 [font color="black"]
-今日はだれにも怒られないといいな・・・[l]
 気分転換に公園で散歩をしていた。[l]
+[cm]
+
+[font color="black"]
+#me
+今日はだれにも怒られないといいな・・・[l]
 [cm]
 [chara_show name="rougai"]
 [font color="black"]
+#
 しばらく歩くと目の前に見知らぬ、おじいちゃんが鳩の餌やりをしていた。[l]
 [cm]
 [font color="black"]
 
-
+#me
 ここで鳩の餌やりは禁止ですよ[l][r]
 [cm]
 [font color="black"]
 #rougai
-
 うるせえ！鳩がかわいそうだからしょうがないだろ！[l]
 [cm]
 [font color="black"]
