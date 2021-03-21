@@ -94,5 +94,5 @@
 #
 プレイしてくれてありがとうございました！！[l]
 
-[s]
+@jump storage=first.ks target=*start
 
