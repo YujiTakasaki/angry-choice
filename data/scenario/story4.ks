@@ -51,11 +51,11 @@ tf.display = tf.player + "さんが選択して下さい"
 [font color="black"]
 
 @layopt layer=message0 visible=false
-[glink x="100" y="400" text="手に持っていただけ" target="*select1" color="orange" size="18"]
+[glink x="80" y="400" text="手に持っていただけ" target="*select1" color="orange" size="20"]
 
-[glink x="350" y="400" text="なんじゃこの老害め！" target="*select2" color="orange" size="18"]
+[glink x="350" y="400" text="なんじゃこの老害め！" target="*select2" color="orange" size="20"]
 
-[glink x="630" y="400" text="人違い？無視した。" target="*select3" color="orange" size="18"]
+[glink x="650" y="400" text="人違い？無視した。" target="*select3" color="orange" size="20"]
 
 
 [s]
