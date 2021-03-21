@@ -45,7 +45,7 @@ tf.display = tf.player + "さんが選択して下さい"
 ちょっと眠いンゴねぇ(メガネを置く）[l][cm]
 
 [font color="blue"]
-”パリンッ”[l][cm]
+”パリンッ”[l][cm]
 [font color="black"]
 #me
 あ、メガネ、、[l][cm]
@@ -129,7 +129,7 @@ tf.display = tf.player + "さんが選択して下さい"
 [font color="black"]
 #tommy
 も、もうやめてクレメンス〜〜！[l]
-[dialog type=alert text="日目クリア！次の日に進む" target="*second"]
+[dialog type=alert text="5日目クリア！次の日に進む" target="*second"]
 
 
 
