@@ -27,8 +27,5 @@
 [cm]
 [freeimage layer=1]
 
-<<<<<<< HEAD
-@jump storage=story3.ks target=*story3
-=======
+
 @jump storage=prologue.ks
->>>>>>> origin/main

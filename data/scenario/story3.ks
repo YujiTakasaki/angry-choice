@@ -1,11 +1,25 @@
-<<<<<<< HEAD
-;ストーリー最初から
-*story3
+;=====こっちが本編=====
+*first
 [cm]
-[image layer="base" page="fore" storage=room.jpg]
-[chara_new name="rougai" storage="rougai_normal.PNG" jname="老害爺さん"]
+[eval exp="tf.player="""]
+[eval exp="tf.display="""]
+[iscript]
+tf.player = f.pname[Math.floor(Math.random()*f.number)]
+tf.display = tf.player + "さんが選択して下さい"
+[endscript]
+[dialog type=alert text=&tf.display target="*start" color="0xff0000"]
 
-;[chara_show name="mother"]
+*start
+[cm]
+[cm]
+[chara_hide name="mother"]
+[image layer="base" page="fore" storage=park.jpg]
+[chara_new name="rougai" storage="rougai_normal.PNG" jname="老害おじさん"]
+[chara_new name="me" storage="mother.png" jname=&tf.player]
+[chara_face name="rougai" face="angry" storage="rougai_angry.PNG"]
+[chara_face name="rougai" face="sad" storage="rougai_hansei.PNG"]
+[chara_mod name="mother" face="default"]
+
 
 @layopt layer=message0 visible=true
 [position height=160 top=430]
@@ -13,32 +27,36 @@
 [position layer=message0 page=fore frame="frame.png" margint="65" marginl="50" marginr="70" marginb="60"]
 [font color="black"]
 
+#me
+3日目[l][r]
+[font color="black"]
+今日はだれにも怒られないといいな・・・[l]
 気分転換に公園で散歩をしていた。[l]
+[cm]
+[chara_show name="rougai"]
+[font color="black"]
 しばらく歩くと目の前に見知らぬ、おじいちゃんが鳩の餌やりをしていた。[l]
 [cm]
 [font color="black"]
 
-[chara_show name="rougai" wait=true left=1300 top=100]
-ここで鳩の餌やりは禁止ですよ[l]
+
+ここで鳩の餌やりは禁止ですよ[l][r]
 [cm]
 [font color="black"]
+#rougai
+
 うるせえ！鳩がかわいそうだからしょうがないだろ！[l]
 [cm]
+[font color="black"]
 それに…！普段週1で一緒にご飯を食べてた近所のタエさんとコロナで会えなくなって、寂しいんだよ…！[l]
 [cm]
 
 @layopt layer=message0 visible=false
-[font color="black"]
-[font size=15]
-選択してね。
-[locate x=100 y=300]
-[button graphic="select1.png" target=*select1]
+[glink x="80" y="400" text="それって不倫ですか？" target="*select1" color="orange" size="18"]
 
-[locate x=400 y=300]
-[button graphic="select2.png" target=*select2]
+[glink x="350" y="400" text="法律違反ですよ。" target="*select2" color="orange" size="18"]
 
-[locate x=700 y=300]
-[button graphic="select3.png" target=*select3]
+[glink x="600" y="400" text="暇ですか？" target="*select3" color="orange" size="18"]
 
 
 [s]
@@ -47,72 +65,88 @@
 *select1
 [cm]
 @layopt layer=message0 visible=true
+[chara_mod name="rougai" face="angry"]
 [font color="black"]
+#rougai
 仕方ねえだろ！l]
 [cm]
 [font color="black"]
 コロナで人と会えなくて寂しいんだよ！[l]
 [cm]
 [font color="black"]
-【！罰ゲーム！】最高のポーズをスマホで自撮りする！[l]
-@jump target=*common
+[dialog type=alert text="【！罰ゲーム！】一分間面白い話を。" target="*bad"]
 
 ;とりあえず鳩に餌をやるのは法律違反です。
 *select2
 [cm]
 @layopt layer=message0 visible=true
+[chara_mod name="rougai" face="angry"]
 [font color="black"]
+#rougai
 あんたは何もわかってない！[l]
 [cm]
 [font color="black"]
 ハトの餌をかけられた。[l]
-@layopt layer=message0 visible=false
-[locate x=300 y=300]
-[button graphic="next.png" target=*second]
-[s]
-*second
-[cm]
-
-@jump target=*common
+[dialog type=alert text="【！罰ゲーム！】全力でコマネチ。" target="*bad"]
 
 ;確かに鳩はかわいそうですが、それよりも優先すべきことがあるのではないでしょうか？
 *select3
 [cm]
 @layopt layer=message0 visible=true
+[chara_mod name="rougai" face="angry"]
 [font color="black"]
-コロナで全てを失った俺に何ができるって言うんだ・・・[l]
+#rougai
+コロナで全てを失った俺に何ができるって言うんだ！[l]
 [cm]
 [font color="black"]
+#me
 今からでもできることはありますよ！[l]
 [cm]
-[font color="red"]
+[chara_mod name="rougai" face="sad"]
+[font color="black"]
+#rougai
 そうか。俺にもまだ生きる資格はあるのか。[l]
 [cm]
-[font color="red"]
+[font color="black"]
+#me
 はい！自信を持って生きていきましょう！[l]
 とりあえず、、、警察行きましょうか。[l]
 [cm]
-[font color="red"]
-@jump storage=story4.ks target=*story4
+[dialog type=alert text="三日目クリア！次の日に進む" target="*good"]
 
 
 
-*common
+*good
+[image layer="base" page="fore" storage=room1.jpg]
 [cm]
-@layopt layer=message0 visible=false
-[image layer=1 storage=goal2.png visible=true top=100 left=100 width=700]
-[locate x=200 y=300 ]
-[button graphic="start.png" target=*start x=300]
-[s]
-*start
+@layopt layer=message0 visible=true
+[font color="black"]
+[chara_hide name="rougai"]
+#
+……その日の夜[l][r]
 [cm]
-[chara_hide name=rougai]
-[freeimage layer=1]
 
-@jump storage=first.ks target=*title
-
-=======
-*story3
+#me
+[font color="black"]
+今日は怒られなかったぞ。[l][r]
+明日も怒られないと良いな……。[l][r]
 [cm]
-三日目
->>>>>>> origin/main
+@jump storage=story4.ks target=*first
+
+
+*bad
+[image layer="base" page="fore" storage=room1.jpg]
+[cm]
+@layopt layer=message0 visible=true
+[font color="black"]
+[chara_hide name="rougai"]
+#
+……その日の夜[l][r]
+[cm]
+
+#me
+[font color="black"]
+怒られてしまった……。[l][r]
+明日は怒られないと良いな……。[l][r]
+[cm]
+@jump storage=story4.ks target=*first
