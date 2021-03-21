@@ -29,6 +29,7 @@ tf.display = tf.player + "さんが選択して下さい"
 [position layer=message0 page=fore frame="frame.png" margint="65" marginl="50" marginr="70" marginb="60"]
 [ptext name="chara_name_area" layer=message0 width="200" color=white x=90 y=380 size=26]
 [chara_config ptext="chara_name_area"]
+[playbgm storage=normal.ogg]
 
 [cm]
 [font color="black"]
@@ -41,6 +42,7 @@ tf.display = tf.player + "さんが選択して下さい"
 [cm]
 [chara_show name="yakuza" ]
 [cm]
+[playbgm storage=oko1.ogg]
 #yakuza
 [font color="black"]
 おい。[l]
@@ -91,6 +93,7 @@ tf.display = tf.player + "さんが選択して下さい"
 [s]
 
 *select1
+[playbgm storage=oko2.ogg]
 [cm]
 @layopt layer=message0 visible=true
 #yakuza
@@ -109,6 +112,7 @@ tf.display = tf.player + "さんが選択して下さい"
 
 
 *select2
+[playbgm storage=oko2.ogg]
 [cm]
 @layopt layer=message0 visible=true
 #yakuza
@@ -128,6 +132,7 @@ tf.display = tf.player + "さんが選択して下さい"
 
 
 *select3
+[playbgm storage=normal.ogg]
 [cm]
 @layopt layer=message0 visible=true
 [chara_mod name="yakuza" face="happy"]

@@ -27,6 +27,7 @@ tf.display = tf.player + "さんが選択して下さい"
 [position layer=message0 page=fore frame="frame.png" margint="65" marginl="50" marginr="70" marginb="60"]
 [ptext name="chara_name_area" layer=message0 width="200" color=white x=90 y=380 size=26]
 [chara_config ptext="chara_name_area"]
+[playbgm storage=normal.ogg]
 [font color="black"]
 キーンコーンカーンコーン…[l]
 [cm]
@@ -40,6 +41,7 @@ tf.display = tf.player + "さんが選択して下さい"
 [cm]
 
 [chara_show name="teacher" top="30"]
+[playbgm storage=oko1.ogg]
 #teacher
 [font color="black"]
 おい。[l]
@@ -71,6 +73,7 @@ tf.display = tf.player + "さんが選択して下さい"
 [s]
 
 *select1
+[playbgm storage=oko2.ogg]
 [cm]
 @layopt layer=message0 visible=true
 #teacher
@@ -91,6 +94,7 @@ tf.display = tf.player + "さんが選択して下さい"
 
 
 *select2
+[playbgm storage=oko2.ogg]
 [cm]
 @layopt layer=message0 visible=true
 #teacher
@@ -107,6 +111,7 @@ tf.display = tf.player + "さんが選択して下さい"
 
 
 *select3
+[playbgm storage=normal.ogg]
 [cm]
 @layopt layer=message0 visible=true
 [chara_mod name="teacher" face="happy"]
