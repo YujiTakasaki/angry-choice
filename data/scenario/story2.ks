@@ -121,7 +121,7 @@ tf.display = tf.player + "さんが選択して下さい"
 今日は怒られなかったぞ。[l][r]
 明日も怒られないと良いな……。[l][r]
 [cm]
-@jump storage=story3.ks target=*story3
+@jump storage=story3.ks target=*first
 
 
 *bad
