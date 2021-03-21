@@ -116,5 +116,5 @@ $(".text_box").keydown(function(e){ if(e.which == 13) { $(".decision").click(); 
 ;ここからオープニング
 それでは、ゲームが始まります……[l][r]
 
-[jump storage=story1.ks target=*first]
+[jump storage=story5.ks target=*first]
 

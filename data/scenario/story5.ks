@@ -1,122 +1,136 @@
 
+; これを書けば、誰が選択するかを表示できる。
 *first
 [cm]
-[image layer="base" page="fore" storage=room.jpg]
-[chara_new name="mother" storage="mother.png" jname="母"]
+[eval exp="tf.player="""]
+[eval exp="tf.display="""]
+[iscript]
+tf.player = f.pname[Math.floor(Math.random()*f.number)]
+tf.display = tf.player + "さんが選択して下さい"
+[endscript]
+[dialog type=alert text=&tf.display target="*start" color="0xff0000"]
 
-[chara_show name="mother"]
+*start
+[image layer="base" page="fore" storage=room.jpg]
+
+[chara_new name="me" storage="mother.png" jname=&tf.player]
+[chara_new name="tommy" storage="tommy.png" jname="理系メガネ"]
+
 
 @layopt layer=message0 visible=true
 [position height=160 top=430]
 [position layer=message0 width=800 height=300 top=380 left=70 ]
 [position layer=message0 page=fore frame="frame.png" margint="65" marginl="50" marginr="70" marginb="60"]
+[ptext name="chara_name_area" layer=message0 width="200" color=white x=90 y=380 size=26]
+[chara_config ptext="chara_name_area"]
 [font color="black"]
 
-[bg storage=room.jpg time=3000]
+[bg storage=takunomi.jpg time=0]
 
 〜〜宅飲み中〜〜[l]
 [cm]
 
-[chara_new name="tommy" storage="ああああ" jname="理系メガネ"]
-[chara_show name="tommy"]
+[chara_new name="tommy" storage="tommy.png" jname="理系メガネ"]
+[chara_show name="tommy" top=30 height=650 width=550 ]
 
+
+
+[chara_show name="tommy"]
 [font color="black"]
+#tommy
 デュフフ、やっぱり飲み会は楽しいンゴ〜[l]
 [cm]
+[font color="black"]
+#tommy
 ちょっと眠いンゴねぇ(メガネを置く）[l][cm]
 
-[font color="white"]
+[font color="blue"]
 ”パリンッ”[l][cm]
-
-あ、トミーさんのメガネ、、[l][cm]
+[font color="black"]
+#me
+あ、メガネ、、[l][cm]
 
 [font color="black"]
+#tommy
 ああ！！ワイのメガネ！！[l][cm]
 
-どうしてくれるんだ！！[l][cm]
+[font color="black"]
+#tommy
+どうしてくれるンゴ！！[l][cm]
+
 
 
 @layopt layer=message0 visible=false
-[font color="black"]
-[font size=15]
-選択してね。
-[locate x=100 y=300]
-[button graphic="select1.png" target=*select1]
-
-[locate x=400 y=300]
-[button graphic="select2.png" target=*select2]
-
-[locate x=700 y=300]
-[button graphic="select3.png" target=*select3]
+[glink x="300" y="200" text="床に置くのも悪いと思います。" target="*select1" color="orange" size="20"]
 
 
-選択肢１：床に置くのも悪いと思います。　BadEnd
-→うるさい！許さん！！もっと飲め！！
-罰ゲーム　グラスのお酒全部飲む
-選択肢２：裸眼のトミーさんが一番ですよ！　軽めのBadEnd
-→デュフッ、調子いいこと言いやがって〜、もっと飲め！
-罰ゲーム　グラスのお酒少し飲む
-選択肢３：まあまあ飲んで飲んで！　酔わせた勢いでSafe
-→うう、これ以上は！
-ZZZ、ZZZ（酔って寝る）
+
+[glink x="300" y="300" text="裸眼のトミーさんが一番ですよ！" target="*select2" color="orange" size="20"]
+
+
+[glink x="300" y="400" text="まあまあ飲んで飲んで！" target="*select3" color="orange" size="20"]
+
+
 [s]
 
 *select1
 [cm]
 @layopt layer=message0 visible=true
 [font color="black"]
-あんたはいつも後で後でって…[l]
+#tommy
+ワイが悪いっていうんか！！[l]
 [cm]
 [font color="black"]
-本当にお父さんにそっくりね！[l]
+#tommy
+そんな奴はもっと飲ませてやる！！[l]
 [cm]
-[font color="black"]
-【！罰ゲーム！】お父さんの物まねをしろ！[l]
-@jump target=*common
+[dialog type=alert text="【！罰ゲーム！】持ってるグラスのお酒を全部飲む！！" target="*second" color="0xff0000"]
+
+
 
 
 *select2
 [cm]
 @layopt layer=message0 visible=true
+
 [font color="black"]
-あら、本当だわ。[l]
+#tommy
+デュフフフフフフフフ[l]
 [cm]
 [font color="black"]
-怒ってごめんなさいね。[l]
-@layopt layer=message0 visible=false
-[locate x=300 y=300]
-[button graphic="next.png" target=*second]
-[s]
-*second
+#tommy
+調子いい奴ンゴね〜〜[l]
+[cm]
+[font color="black"]
+#tommy
+もっと飲むンゴ！！[l]
 [cm]
 
-@jump storage=story2.ks target=*story2
+
+[dialog type=alert text="【！罰ゲーム！】持ってるグラスのお酒を半分飲む！" target="*second" color="0xff0000"]
+
+
 
 *select3
 [cm]
 @layopt layer=message0 visible=true
 [font color="black"]
-あんた、家にいるとずーーーと食べてるじゃない！[l]
+#tommy
+おっおい今はメガネの話をっ！[l]
 [cm]
 [font color="black"]
-そんなんなら一生食べ続けてなさい！[l]
+#tommy
+やめるんご！これ以上は飲めない！！[l]
 [cm]
 [font color="black"]
-【！罰ゲーム！】何か一品注文orコンビニおごり！[l]
-@jump target=*common
+#tommy
+も、もうやめてクレメンス〜〜！[l]
+[dialog type=alert text="日目クリア！次の日に進む" target="*second"]
 
 
-*common
-[cm]
-@layopt layer=message0 visible=false
-[image layer=1 storage=goal2.png visible=true top=100 left=100 width=700]
-[locate x=200 y=300 ]
-[button graphic="start.png" target=*start x=300]
-[s]
-*start
-[cm]
-[chara_hide name=mother]
-[freeimage layer=1]
 
-@jump storage=first.ks target=*title
+*second
+[chara_hide name="tommy"]
+@jump storage=story6.ks target=*first
+
 
