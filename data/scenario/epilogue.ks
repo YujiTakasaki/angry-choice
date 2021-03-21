@@ -6,7 +6,7 @@
 
 ;後で変更
 [chara_new name="mother" storage="happy.png" jname="母"] 
-[chara_new name="ojisan" storage="rougai_hansei.png" jname="おじさん" ] 
+[chara_new name="ojisan" storage="rougai_hansei.PNG" jname="おじさん" ] 
 [chara_new name="tommy" storage="tommy.png" jname="理系メガネ" ] 
 [chara_new name="teacher" storage="teacherhappy.png" jname="先生" ] 
 [chara_new name="yakuza" storage="yakuzahappy.png" jname="やくざ" ] 
