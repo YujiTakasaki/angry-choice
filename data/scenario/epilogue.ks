@@ -4,7 +4,7 @@
 
 ;後で変更
 [chara_new name="mother" storage="happy.png" jname="母"] 
-[chara_new name="ojisan" storage="teacherhappy.png" jname="おじさん" ] 
+[chara_new name="ojisan" storage="rougai_hansei.png" jname="おじさん" ] 
 [chara_new name="tommy" storage="teacherhappy.png" jname="理系メガネ" ] 
 [chara_new name="teacher" storage="teacherhappy.png" jname="先生" ] 
 [chara_new name="yakuza" storage="teacherhappy.png" jname="ヤクザ" ] 
@@ -19,9 +19,9 @@
 
 
 [chara_show name="mother"]
-[chara_show name="teacher" time="0"]
-[chara_show name="tommy" time="0"]
 [chara_show name="ojisan" time="0"]
+[chara_show name="tommy" time="0"]
+[chara_show name="teacher" time="0"]
 [chara_show name="yakuza" time="0"]
 
 [cm]
@@ -66,6 +66,7 @@
 [font color="black"]
 よく頑張ったな。[l][r]
 これからの人生で嫌なこともあるだろうが、お前なら大丈夫だろう。[l][r]
+[cm]
 応援しているぞ。[l][r]
 
 ; ヤクザ
@@ -77,14 +78,19 @@
 おう！乙だな！[l][r]
 わーいわーい[l][r]
 
+
 ; まとめ
+[cm]
 [chara_hide name="yakuza" time=100]
-[chara_show name="mother" time=100]
-[chara_show name="teacher" time="0"]
-[chara_show name="tommy" time="0"]
+[chara_show name="mother"]
 [chara_show name="ojisan" time="0"]
+[chara_show name="tommy" time="0"]
+[chara_show name="teacher" time="0"]
 [chara_show name="yakuza" time="0"]
+
+[font color="red"]
+#
 プレイしてくれてありがとうございました！！[l]
 
-[jump storage=story7.ks target=*first]
+[s]
 
