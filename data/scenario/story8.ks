@@ -142,4 +142,4 @@ tf.display = tf.player + "さんが選択して下さい"
 
 *second
 
-@jump storage=story9.ks target=*story9
+@jump storage=story9.ks target=*first
