@@ -16,7 +16,7 @@ tf.display = tf.player + "さんが選択して下さい"
 
 
 [chara_new name="teacher" storage="teacherangry.png" jname="先生" ]
-[chara_new name="me" storage="mother.png" jname="僕"]
+[chara_new name="me" storage="mother.png" jname=&tf.player]
 [chara_face name="teacher" face="happy" storage="teacherhappy.png"]
 
 
@@ -95,7 +95,7 @@ tf.display = tf.player + "さんが選択して下さい"
 @layopt layer=message0 visible=true
 #teacher
 [font color="black"]
-正直ものだな。[l]
+正直者だな。[l]
 [cm]
 [font color="black"]
 だが、物乞いは恥ずかしいぞ。[l]
@@ -122,8 +122,5 @@ tf.display = tf.player + "さんが選択して下さい"
 可愛そうだから今回は猶予をあげよう。[l]
 [dialog type=alert text="七日目クリア！次の日に進む" target="*second"]
 
-
-
 *second
-
 @jump storage=story8.ks target=*first
