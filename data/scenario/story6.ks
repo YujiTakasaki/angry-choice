@@ -123,7 +123,7 @@ Geekのオフィスでミーティング中[l]
 #tommy2
 すまんすまん！ワイの勘違いだったみたいンゴね〜〜[l]
 [cm]
-[dialog type=alert text="6日目クリア！次の日に進む" target="*second"]
+[dialog type=alert text="六日目クリア！次の日に進む" target="*second"]
 *second
 [chara_hide name="tommy2"]
 @jump storage=story7.ks target=*first

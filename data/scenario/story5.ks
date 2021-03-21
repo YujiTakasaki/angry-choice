@@ -129,7 +129,7 @@ tf.display = tf.player + "さんが選択して下さい"
 [font color="black"]
 #tommy
 も、もうやめてクレメンス〜〜！[l]
-[dialog type=alert text="5日目クリア！次の日に進む" target="*second"]
+[dialog type=alert text="五日目クリア！次の日に進む" target="*second"]
 
 
 
