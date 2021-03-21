@@ -65,12 +65,13 @@
 [endif]
 [cm]
 
-名前を入力してください。[l]
+名前を入力してください。[r]
+(最大7文字)[l]
 [if exp="f.number == 1"]
 [eval exp="f.pname=[]"]
 [eval exp="f.cnt=0"]
-[edit name="f.buffer" left="300" top="300" width="230" height="40"]
-[button name="decision" graphic="start.png" x="300" y="500" target="*commit-name"]
+[edit name="f.buffer" left="300" top="300" width="230" height="40" maxchars="7"]
+[button name="decision" graphic="ok-button.png" x="600" y="300" width="120" height="50" target="*commit-name"]
 [iscript]
 $(".text_box").keydown(function(e){ if(e.which == 13) { $(".decision").click(); } });
 [endscript]
@@ -87,10 +88,11 @@ $(".text_box").keydown(function(e){ if(e.which == 13) { $(".decision").click(); 
 ;ループカウント5の時*loopendへジャンプ
 [jump target=*loopend cond="f.cnt == f.number"]
 
-[emb exp="f.cnt + 1"] 人目の名前を入力してください。[l]
+[emb exp="f.cnt + 1"] 人目の名前を入力してください。[r]
+(最大7文字)[l]
 
-[edit name="f.buffer" left="300" top="300" width="230" height="40"]
-[button name="decision" graphic="start.png" x="300" y="500" target="*commit-name"]
+[edit name="f.buffer" left="300" top="300" width="230" height="40" maxchars="7"]
+[button name="decision" graphic="ok-button.png" x="600" y="300" width="120" height="50" target="*commit-name"]
 [iscript]
 $(".text_box").keydown(function(e){ if(e.which == 13) { $(".decision").click(); } });
 [endscript]
