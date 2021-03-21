@@ -22,6 +22,7 @@ tf.display = tf.player + "さんが選択して下さい"
 
 
 @layopt layer=message0 visible=true
+[playbgm storage=normal.ogg]
 [position height=160 top=430]
 [position layer=message0 width=800 height=300 top=380 left=70 ]
 [position layer=message0 page=fore frame="frame.png" margint="65" marginl="50" marginr="70" marginb="60"]
@@ -33,6 +34,7 @@ tf.display = tf.player + "さんが選択して下さい"
 今日はだれにも怒られなさそうだぞ！！[l]
 [cm]
 [chara_show name="mother"]
+[playbgm storage=oko1.ogg]
 #mother
 [font color="black"]
 ねえちょっと、[l]
@@ -55,6 +57,7 @@ tf.display = tf.player + "さんが選択して下さい"
 [s]
 
 *select1
+[playbgm storage=normal.ogg]
 [cm]
 @layopt layer=message0 visible=true
 [chara_mod name="mother" face="bikkuri"]
@@ -72,6 +75,7 @@ tf.display = tf.player + "さんが選択して下さい"
 
 
 *select2
+[playbgm storage=oko2.ogg]
 [cm]
 @layopt layer=message0 visible=true
 [font color="black"]
@@ -86,6 +90,7 @@ tf.display = tf.player + "さんが選択して下さい"
 
 
 *select3
+[playbgm storage=oko2.ogg]
 [cm]
 @layopt layer=message0 visible=true
 [chara_mod name="mother" face="bikkuri"]
@@ -116,7 +121,7 @@ tf.display = tf.player + "さんが選択して下さい"
 今日は怒られなかったぞ。[l][r]
 明日も怒られないと良いな……。[l][r]
 [cm]
-@jump storage=story3.ks target=*first
+@jump storage=story3.ks target=*story3
 
 
 *bad

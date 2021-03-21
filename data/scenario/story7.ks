@@ -16,7 +16,7 @@ tf.display = tf.player + "さんが選択して下さい"
 
 
 [chara_new name="teacher" storage="teacherangry.png" jname="先生" ]
-[chara_new name="me" storage="mother.png" jname="僕"]
+[chara_new name="me" storage="mother.png" jname=&tf.player]
 [chara_face name="teacher" face="happy" storage="teacherhappy.png"]
 
 
@@ -27,6 +27,7 @@ tf.display = tf.player + "さんが選択して下さい"
 [position layer=message0 page=fore frame="frame.png" margint="65" marginl="50" marginr="70" marginb="60"]
 [ptext name="chara_name_area" layer=message0 width="200" color=white x=90 y=380 size=26]
 [chara_config ptext="chara_name_area"]
+[playbgm storage=normal.ogg]
 [font color="black"]
 キーンコーンカーンコーン…[l]
 [cm]
@@ -40,6 +41,7 @@ tf.display = tf.player + "さんが選択して下さい"
 [cm]
 
 [chara_show name="teacher" top="30"]
+[playbgm storage=oko1.ogg]
 #teacher
 [font color="black"]
 おい。[l]
@@ -71,6 +73,7 @@ tf.display = tf.player + "さんが選択して下さい"
 [s]
 
 *select1
+[playbgm storage=oko2.ogg]
 [cm]
 @layopt layer=message0 visible=true
 #teacher
@@ -91,11 +94,12 @@ tf.display = tf.player + "さんが選択して下さい"
 
 
 *select2
+[playbgm storage=oko2.ogg]
 [cm]
 @layopt layer=message0 visible=true
 #teacher
 [font color="black"]
-正直ものだな。[l]
+正直者だな。[l]
 [cm]
 [font color="black"]
 だが、物乞いは恥ずかしいぞ。[l]
@@ -107,6 +111,7 @@ tf.display = tf.player + "さんが選択して下さい"
 
 
 *select3
+[playbgm storage=normal.ogg]
 [cm]
 @layopt layer=message0 visible=true
 [chara_mod name="teacher" face="happy"]
@@ -122,8 +127,5 @@ tf.display = tf.player + "さんが選択して下さい"
 可愛そうだから今回は猶予をあげよう。[l]
 [dialog type=alert text="七日目クリア！次の日に進む" target="*second"]
 
-
-
 *second
-
 @jump storage=story8.ks target=*first
