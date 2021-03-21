@@ -24,6 +24,7 @@ tf.display = tf.player + "さんが選択して下さい"
 [position layer=message0 width=800 height=300 top=380 left=70 ]
 [position layer=message0 page=fore frame="frame.png" margint="65" marginl="50" marginr="70" marginb="60"]
 [font color="black"]
+[playbgm storage=normal.ogg]
 
 [bg storage=geek.png time=3000]
 #
@@ -36,6 +37,7 @@ Geekのオフィスでミーティング中[l]
 おーい、[emb exp=tf.player]の報告の番ンゴね[l]
 [cm]
 
+[playbgm storage=oko1.ogg]
 [font color="black"]
 #tommy2
 あれ、、議事録書いてないけど、、。[l]
@@ -67,6 +69,7 @@ Geekのオフィスでミーティング中[l]
 [s]
 
 *select1
+[playbgm storage=oko2.ogg]
 [cm]
 @layopt layer=message0 visible=true
 #tommy2
@@ -83,6 +86,7 @@ Geekのオフィスでミーティング中[l]
 
 
 *select2
+[playbgm storage=oko2.ogg]
 [cm]
 @layopt layer=message0 visible=true
 #tommy2
@@ -100,6 +104,7 @@ Geekのオフィスでミーティング中[l]
 
 
 *select3
+[playbgm storage=normal.ogg]
 [cm]
 @layopt layer=message0 visible=true
 #tommy2

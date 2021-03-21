@@ -24,6 +24,7 @@ tf.display = tf.player + "さんが選択して下さい"
 [ptext name="chara_name_area" layer=message0 width="200" color=white x=90 y=380 size=26]
 [chara_config ptext="chara_name_area"]
 [font color="black"]
+[playbgm storage=normal.ogg]
 
 [bg storage=takunomi.jpg time=0]
 
@@ -35,7 +36,6 @@ tf.display = tf.player + "さんが選択して下さい"
 
 
 
-[chara_show name="tommy"]
 [font color="black"]
 #tommy
 デュフフ、やっぱり飲み会は楽しいンゴ〜[l]
@@ -50,6 +50,7 @@ tf.display = tf.player + "さんが選択して下さい"
 #me
 あ、メガネ、、[l][cm]
 
+[playbgm storage=oko1.ogg]
 [font color="black"]
 #tommy
 ああ！！ワイのメガネ！！[l][cm]
@@ -74,6 +75,7 @@ tf.display = tf.player + "さんが選択して下さい"
 [s]
 
 *select1
+[playbgm storage=oko2.ogg]
 [cm]
 @layopt layer=message0 visible=true
 [font color="black"]
@@ -90,6 +92,7 @@ tf.display = tf.player + "さんが選択して下さい"
 
 
 *select2
+[playbgm storage=oko2.ogg]
 [cm]
 @layopt layer=message0 visible=true
 
@@ -112,6 +115,7 @@ tf.display = tf.player + "さんが選択して下さい"
 
 
 *select3
+[playbgm storage=normal.ogg]
 [cm]
 @layopt layer=message0 visible=true
 [font color="black"]
