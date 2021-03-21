@@ -18,7 +18,7 @@ tf.display = tf.player + "さんが選択して下さい"
 
 
 [chara_new name="teacher" storage="teacherangry.png" jname="先生" ]
-[chara_new name="me" storage="mother.png" jname="僕"]
+[chara_new name="me" storage="mother.png" jname=&tf.player]
 [chara_face name="teacher" face="happy" storage="teacherhappy.png"]
 
 
@@ -137,7 +137,6 @@ tf.display = tf.player + "さんが選択して下さい"
 今日のところは見逃してやろう。[l]
 先生も少し休んで行こう。
 [dialog type=alert text="八日目クリア！次の日に進む" target="*second"]
-
 
 
 *second
