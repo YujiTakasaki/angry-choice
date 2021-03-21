@@ -25,6 +25,7 @@ tf.display = tf.player + "さんが選択して下さい"
 [ptext name="chara_name_area" layer=message0 width="200" color=white x=90 y=380 size=26]
 [chara_config ptext="chara_name_area"]
 [font color="black"]
+[playbgm storage=normal.ogg]
 
 #
 3日目[l][r]
@@ -47,6 +48,7 @@ tf.display = tf.player + "さんが選択して下さい"
 ここで鳩の餌やりは禁止ですよ[l][r]
 [cm]
 [font color="black"]
+[playbgm storage=oko1.ogg]
 #rougai
 うるせえ！鳩がかわいそうだからしょうがないだろ！[l]
 [cm]
@@ -66,6 +68,7 @@ tf.display = tf.player + "さんが選択して下さい"
 
 ;それって不倫ですか？
 *select1
+[playbgm storage=oko2.ogg]
 [cm]
 @layopt layer=message0 visible=true
 [chara_mod name="rougai" face="angry"]
@@ -81,6 +84,7 @@ tf.display = tf.player + "さんが選択して下さい"
 
 ;とりあえず鳩に餌をやるのは法律違反です。
 *select2
+[playbgm storage=oko2.ogg]
 [cm]
 @layopt layer=message0 visible=true
 [chara_mod name="rougai" face="angry"]
@@ -94,6 +98,7 @@ tf.display = tf.player + "さんが選択して下さい"
 
 ;確かに鳩はかわいそうですが、それよりも優先すべきことがあるのではないでしょうか？
 *select3
+[playbgm storage=normal.ogg]
 [cm]
 @layopt layer=message0 visible=true
 [chara_mod name="rougai" face="angry"]

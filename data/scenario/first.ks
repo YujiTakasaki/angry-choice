@@ -2,7 +2,7 @@
 *title
 ;メッセージレイヤを非表示にしておく
 @layopt layer=message0 visible=false
-
+[playbgm storage=op.ogg]
 ;背景画像を設定
 [image layer="base" page="fore" storage=home.jpg]
 [image layer=1 storage=title2.png visible=true top=100 left=150 width=700]

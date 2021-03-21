@@ -24,6 +24,7 @@ tf.display = tf.player + "さんが選択して下さい"
 [position layer=message0 page=fore frame="frame.png" margint="65" marginl="50" marginr="70" marginb="60"]
 [ptext name="chara_name_area" layer=message0 width="200" color=white x=90 y=380 size=26]
 [chara_config ptext="chara_name_area"]
+[playbgm storage=normal.ogg]
 [font color="black"]
 #me
 僕は家族とこの家に住む普通の大学生。[l]
@@ -35,6 +36,7 @@ tf.display = tf.player + "さんが選択して下さい"
 何とかして平穏な日常を過ごしたいが、[l]
 すでに目の前には恐ろしい顔をした母がいる。[l]
 [cm]
+[playbgm storage=oko1.ogg]
 [chara_show name="mother"]
 #mother
 [font color="black"]
@@ -65,9 +67,11 @@ tf.display = tf.player + "さんが選択して下さい"
 
 [s]
 
+
 *select1
 [cm]
 @layopt layer=message0 visible=true
+[playbgm storage=oko2.ogg]
 #mother
 [font color="black"]
 あんたはいつも後で後でって…[l]
@@ -82,6 +86,7 @@ tf.display = tf.player + "さんが選択して下さい"
 *select2
 [cm]
 @layopt layer=message0 visible=true
+[playbgm storage=normal.ogg]
 [chara_mod name="mother" face="bikkuri"]
 #mother
 [font color="black"]
@@ -95,6 +100,7 @@ tf.display = tf.player + "さんが選択して下さい"
 *select3
 [cm]
 @layopt layer=message0 visible=true
+[playbgm storage=oko2.ogg]
 #mother
 [font color="black"]
 あんた、家にいるとずーーーと食べてるじゃない！[l]
