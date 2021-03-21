@@ -1,5 +1,7 @@
 *start
+[playbgm storage=op.ogg]
 @layopt layer=message0 visible=true
+[image layer="base" page="fore" storage=home.jpg]
 ;エピローグ
 
 ;後で変更
@@ -7,7 +9,7 @@
 [chara_new name="ojisan" storage="rougai_hansei.png" jname="おじさん" ] 
 [chara_new name="tommy" storage="teacherhappy.png" jname="理系メガネ" ] 
 [chara_new name="teacher" storage="teacherhappy.png" jname="先生" ] 
-[chara_new name="yakuza" storage="teacherhappy.png" jname="ヤクザ" ] 
+[chara_new name="yakuza" storage="yakuzahappy.png" jname="やくざ" ] 
 
 
 @layopt layer=message0 visible=true
@@ -47,7 +49,7 @@
 #ojisan
 [font color="black"]
 最近の若いもんはけしからんと思っておったが……[l][r]
-お前は違うようだな！がはは！[l][r]
+お前は違うようだな！[l][r]
 
 ; 理系メガネ
 [cm]
@@ -75,8 +77,8 @@
 [chara_show name="yakuza" time=100]
 #yakuza
 [font color="black"]
-おう！乙だな！[l][r]
-わーいわーい[l][r]
+おう！お疲れ様だな！[l][r]
+がはは！[l][r]
 
 
 ; まとめ

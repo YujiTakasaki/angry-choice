@@ -166,9 +166,11 @@ tf.display = tf.player + "さんが選択して下さい"
 まちやがれ…！[l]
 [cm]
 [font color="black"]
-（やくざめちゃくちゃ足が速い。追いつく。）[l]
+#me
+（やくざめちゃくちゃ足が速い。追いつかれる。）[l]
 [cm]
 [font color="black"]
+#yakuza
 おいおい。[l]
 [cm]
 [font color="black"]

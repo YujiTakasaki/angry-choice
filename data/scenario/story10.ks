@@ -152,4 +152,5 @@ tf.display = tf.player + "さんが選択して下さい"
 
 *second
 
-@jump storage=story10.ks target=*first
+[chara_hide name="yakuza"]
+@jump storage=epilogue.ks target=*start
