@@ -7,7 +7,7 @@
 ;後で変更
 [chara_new name="mother" storage="happy.png" jname="母"] 
 [chara_new name="ojisan" storage="rougai_hansei.png" jname="おじさん" ] 
-[chara_new name="tommy" storage="teacherhappy.png" jname="理系メガネ" ] 
+[chara_new name="tommy" storage="tommy.png" jname="理系メガネ" ] 
 [chara_new name="teacher" storage="teacherhappy.png" jname="先生" ] 
 [chara_new name="yakuza" storage="yakuzahappy.png" jname="やくざ" ] 
 
@@ -22,7 +22,7 @@
 
 [chara_show name="mother"]
 [chara_show name="ojisan" time="0"]
-[chara_show name="tommy" time="0"]
+[chara_show name="tommy" top=30 height=650 width=550 time=0]
 [chara_show name="teacher" time="0"]
 [chara_show name="yakuza" time="0"]
 
@@ -54,7 +54,7 @@
 ; 理系メガネ
 [cm]
 [chara_hide name="ojisan" time=100]
-[chara_show name="tommy" time=100]
+[chara_show name="tommy" top=30 height=650 width=550 time=100]
 #tommy
 [font color="black"]
 なかなかやるンゴね。[l][r]
@@ -86,13 +86,13 @@
 [chara_hide name="yakuza" time=100]
 [chara_show name="mother"]
 [chara_show name="ojisan" time="0"]
-[chara_show name="tommy" time="0"]
+[chara_show name="tommy" top=30 height=650 width=550 time=0]
 [chara_show name="teacher" time="0"]
 [chara_show name="yakuza" time="0"]
 
 [font color="red"]
 #
 プレイしてくれてありがとうございました！！[l]
-
-[s]
+[chara_hide_all time=100]
+@jump storage=first.ks target=*start
 
